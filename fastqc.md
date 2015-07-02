@@ -53,10 +53,14 @@ And here is the plot:
 
 ![Figure fastqc-old](img/fastqc/dup_levels_old.png?raw=true)
 
+As you can see above, the y-axis scale is a bit problematic. As David Andrews
+suggests in his 2011 blog post, this happens intentionally in order to save
+computational memory. So the number of sequences occurring exactly once is set
+to 100%, and all other values are relative to that number. This has several
+issues, which are mentioned in his post.
 
-
-This has changed in the latest v0.11.2 (from sample DYST2-3 WGS recalibrated
-BAM):
+The plot has changed in the latest v0.11.2 (from sample DYST2-3 WGS
+recalibrated BAM):
 
 ```
 >>Sequence Duplication Levels	pass
@@ -85,15 +89,14 @@ And here is the plot:
 
 ![Figure fastqc-new](img/fastqc/dup_levels_new.png?raw=true)
 
+The y-axis represents a percentage of the total library, so
+all values are much easier to understand. The x-axis categories have been
+increased in order to get a clearer understanding of the duplication level. 
+Finally, the plot has two lines instead of one, which refer to the raw and
+deduplicated libraries. See the 2013 blog post for a nice example.
 
 **References**
 
-Website: 
-
 * <http://www.bioinformatics.babraham.ac.uk/projects/fastqc/>
-
-
-Babraham blog:
-
 * <http://proteo.me.uk/2013/09/a-new-way-to-look-at-duplication-in-fastqc-v0-11/>
 * <http://proteo.me.uk/2011/05/interpreting-the-duplicate-sequence-plot-in-fastqc/>
