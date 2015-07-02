@@ -51,7 +51,7 @@ FASTQ):
 
 And here is the plot:
 
-![Figure fastq-old](img/fastqc/dup_levels_old.png?raw=true)
+![Figure fastqc-old](img/fastqc/dup_levels_old.png?raw=true)
 
 
 
@@ -80,6 +80,10 @@ BAM):
 >10k+	0.0	0.0
 >>END_MODULE
 ```
+
+And here is the plot:
+
+![Figure fastqc-new](img/fastqc/dup_levels_new.png?raw=true)
 
 
 **References**
