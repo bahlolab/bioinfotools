@@ -7,13 +7,13 @@ to long reference genomes. It consists of three algorithms, each
 optimised for a particular type and length of read: BWA-backtrack, BWA-SW
 and BWA-MEM. The BWA-MEM algorithm is preferred for reads with length greater
 than 70 bases, since it is much faster and more accurate than the other two.
-The program is written in C code and is available on GitHub (development
+The source code is written in C and is available on GitHub (development
 version) and SourceForge (released version).
 
 ## Installation
 * First download the tarball from SourceForge (e.g. bwa-0.7.12.tar.bz2) using
 curl (the -L option is used because SourceForge redirects to another location).
-You can also confirm that you've downloaded the right thing by checking that
+You can confirm that you've downloaded the right file by checking that
 the MD5 hash is the same as described on the download page (click the "i" info
 link):
 
