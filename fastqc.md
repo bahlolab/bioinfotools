@@ -1,7 +1,7 @@
 FastQC Documentation
 ====================
 
-## What is FastQC?
+## Introduction
 FastQC is a Java program developed by the Babraham Institute (near Cambridge
 UK). It calculates various quality control metrics for MPS data and
 outputs helpful plots which can be used to infer if the data is of expected
