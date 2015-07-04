@@ -34,7 +34,9 @@ bundle
   |--exampleFASTA
 ```
 
-Let's look first at b37:
+These are the contents of b37 (hg19 is very similar, except that the
+reference sequence is called `ucsc.hg19.fasta.gz` and the `dbsnp_138` version
+is used):
 
 ```
 Reference Sequence
@@ -79,36 +81,64 @@ Large-scale standard single sample BAM file for testing
    CEUTrio.HiSeq.WGS.b37.NA12878.vcf.gz
    CEUTrio.HiSeq.WGS.b37.NA12878.vcf.idx.gz
 
+(Not mentioned)
 |--1000G_phase1.snps.high_confidence.b37.vcf.gz
    1000G_phase1.snps.high_confidence.b37.vcf.idx.gz
 |--Broad.human.exome.b37.interval_list.gz
 |--CEUTrio.HiSeq.WGS.b37.bestPractices.phased.b37.vcf.gz
    CEUTrio.HiSeq.WGS.b37.bestPractices.phased.b37.vcf.idx.gz
-
 |--human_g1k_v37_decoy.fasta.gz
    human_g1k_v37_decoy.fasta.fai.gz
    human_g1k_v37_decoy.dict.gz
 
 ```
 
-The hg19 directory differs in the following file names:
-
-* dbsnp release 138 (this is for the UCSC reference).
-* the reference is `ucsc.hg19.fasta.gz`.
-
-
 ## Differences between b37 and hg19
-* 
+
+The Genome Reference Consortium (GRC) periodically releases a certain version
+of the human genome e.g. in February 2009 they released "build 37", called
+GRCh37.
+
+| UCSC Version | Release Date | Release Name |
+|--------------|--------------|--------------|
+| hg18         | Mar 2006     | NCBI b36     |
+| hg19         | Feb 2009     | GRCh37       |
+| hg38         | Dec 2013     | GRCh38       |
+
+Each version includes the following sequences:
+
+* 24 "relatively complete" sequences for chromosomes 1-22, X and Y;
+* A complete mitochondrial sequence;
+* Several "unlocalised sequences" - known chromosome, unknown coordinates;
+* Several "unplaced sequences" - known from human, unknown chromosome;
+* Several "alternate loci" - sequences with alternate representations of
+specific human regions;
+
+The GRC didn't provide a set of naming rules for these sequences, so different
+teams adopted different rules:
+
+* The **b37** conventions were used by the 1KG Project. GATK and IGV use this
+name. The ENSEMBL genome browser, the NCBI dbSNP database (in VCF files) and
+the Sanger COSMIC database (in VCF files) are among those preferring these
+conventions. These are also the preferred standards for new projects.
+* The **hg19** conventions were used by the UCSC genome browser. Despite the
+old mitochondrial sequence, the nonstandard naming and the inclusion of
+alternate loci (which are undesirable for read mapping), hg19 has gained
+popularity due to its exposure via the UCSC genome browser, and is often the
+convention used by vendors when reporting exome enrichment kit coordinates.
+
 * Naming conventions:
   - b37: 1-22, X, Y, MT;
   - hg19: chr1-chr22, chrX, chrY, chrM;
 * Mitochondrial sequence:
-  - hg19 has an older one and includes alternate loci;
   - b37 has an updated one;
+  - hg19 has an older one from build 36;
 * Unlocalised and unplaced sequences:
   - b37: named after their accession numbers e.g. "GL000191.1";
-  - hg19: 
-* Alternate loci
+  - hg19: given custom names e.g. "chr1\_gl000191\_random", "chrUn\_gl000221";
+* Alternate loci:
+  - b37: not included;
+  - hg19: included;
 
 
 * It's suggested to use the extended version of b37 which includes decoy
@@ -118,8 +148,6 @@ sequences.
   - supported by GATK and IGV;
   - compatible with all the annotations (dbSNP etc.) that are reported using
   the "b37" conventions. 
-
-* 
 
 
 **References**
@@ -131,3 +159,4 @@ sequences.
   - <https://answers.dnanexus.com/p/183/>
   - <https://wiki.dnanexus.com/Scientific-Notes/human-genome>
   - <http://gatkforums.broadinstitute.org/discussion/1810/whats-the-difference-between-b37-and-hg19-resources>
+  - <http://genome.ucsc.edu/FAQ/FAQreleases.html>
