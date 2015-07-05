@@ -43,6 +43,9 @@ Reference Sequence
 |--human_g1k_v37.fasta.gz
    human_g1k_v37.fasta.fai.gz
    human_g1k_v37.dict.gz
+|--human_g1k_v37_decoy.fasta.gz
+   human_g1k_v37_decoy.fasta.fai.gz
+   human_g1k_v37_decoy.dict.gz
 
 dbSNP recent release
 |--dbsnp_137.b37.vcf.gz
@@ -87,17 +90,14 @@ Large-scale standard single sample BAM file for testing
 |--Broad.human.exome.b37.interval_list.gz
 |--CEUTrio.HiSeq.WGS.b37.bestPractices.phased.b37.vcf.gz
    CEUTrio.HiSeq.WGS.b37.bestPractices.phased.b37.vcf.idx.gz
-|--human_g1k_v37_decoy.fasta.gz
-   human_g1k_v37_decoy.fasta.fai.gz
-   human_g1k_v37_decoy.dict.gz
 
 ```
 
 ## Differences between b37 and hg19
 
-The Genome Reference Consortium (GRC) periodically releases a certain version
-of the human genome e.g. in February 2009 they released "build 37", called
-GRCh37.
+The Genome Reference Consortium (GRC) periodically releases a version
+of the human genome e.g. in February 2009 they released "build 37", which is
+known as GRCh37.
 
 | UCSC Version | Release Date | Release Name |
 |--------------|--------------|--------------|
@@ -127,6 +127,8 @@ alternate loci (which are undesirable for read mapping), hg19 has gained
 popularity due to its exposure via the UCSC genome browser, and is often the
 convention used by vendors when reporting exome enrichment kit coordinates.
 
+In summary the differences are:
+
 * Naming conventions:
   - b37: 1-22, X, Y, MT;
   - hg19: chr1-chr22, chrX, chrY, chrM;
@@ -140,15 +142,18 @@ convention used by vendors when reporting exome enrichment kit coordinates.
   - b37: not included;
   - hg19: included;
 
-
-* It's suggested to use the extended version of b37 which includes decoy
-sequences. 
+* It's suggested to use the extended "decoy" version of b37 which includes
+human herpesvirus sequence and a decoy sequence derived from HuRef (Craig
+Venter genome), humen BAC and Fosmid clones, and NA12878 (named "hs37d5"). It
+also has the pseudo-autosomal regions (PAR) of chromosome Y masked out
+(replaced with "N") so that the respective regions in chromosome X may be
+treated as diploid. In summary:
   - used by the 1KG in Phase II;
-  - provides better results;
+  - provides better results due to the PAR masking and the addition of the
+  decoy sequences;
   - supported by GATK and IGV;
   - compatible with all the annotations (dbSNP etc.) that are reported using
   the "b37" conventions. 
-
 
 **References**
 
