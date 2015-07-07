@@ -31,7 +31,8 @@ tar -xvjf bwa-0.7.12.tar.bz2
 * Go into the `bwa-0.7.12` folder and type `make`. This will create the binary
 file `bwa`, which you need to point to when you want to run BWA.
 * In order to view the latest manual page, use `man ./bwa.1` (if you're in the
-bwa directory).
+bwa directory). You can copy the `bwa.1` file to `/usr/local/share/man/man1` to
+use `man bwa` directly.
 
 In summary:
 

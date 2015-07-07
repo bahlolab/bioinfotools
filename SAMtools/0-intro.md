@@ -43,7 +43,9 @@ tar -xvjf samtools-1.2.tar.bz2
 binary file `samtools`, which you need to point to when you want to run
 samtools.
 * In order to view the latest manual page, use `man ./samtools.1` (if you're
-in the samtools directory).
+in the samtools directory). You can copy the `samtools.1` file to
+`/usr/local/share/man/man1` to use `man samtools` directly.
+
 
 In summary:
 
