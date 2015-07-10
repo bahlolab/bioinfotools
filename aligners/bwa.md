@@ -47,7 +47,8 @@ man ./bwa.1
 
 ## Commands
 * `index`: You first need to index the reference human genome in FASTA format.
-
+This takes several hours but it only needs to be done once. It has already been
+done on the servers and can be found at `$bahlolab_db/bwaindex/gatk/hg19.fa`.
 
 **References**
 
