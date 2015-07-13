@@ -53,8 +53,12 @@ Example output (from a sorted BAM file aligned with BWA-MEM, no duplicates flagg
  13 2424881 + 0 with mate mapped to a different chr (mapQ>=5)
 ```
 
+Note here that total = paired in sequencing + supplementary.
+The supplementary reads are also known as chimeric reads.
+
 
 References:
 
 * SAMtools dev version: <https://github.com/samtools/samtools/blob/develop/samtools.1>
-* Biostars1: <https://www.biostars.org/p/12475/>
+* Biostars C code: <https://www.biostars.org/p/12475/>
+* Biostars chimeric reads: <https://www.biostars.org/p/79611/>
