@@ -129,20 +129,22 @@ convention used by vendors when reporting exome enrichment kit coordinates.
 
 In summary the differences are:
 
-* Naming conventions:
+1. Naming conventions:
   - b37: 1-22, X, Y, MT;
   - hg19: chr1-chr22, chrX, chrY, chrM;
-* Mitochondrial sequence:
+1. Mitochondrial sequence:
   - b37 has an updated one;
   - hg19 has an older one from build 36;
-* Unlocalised and unplaced sequences:
+1. Unlocalised and unplaced sequences:
   - b37: named after their accession numbers e.g. "GL000191.1";
   - hg19: given custom names e.g. "chr1\_gl000191\_random", "chrUn\_gl000221";
-* Alternate loci:
+1. Alternate loci:
   - b37: not included;
   - hg19: included;
 
-* It's suggested to use the extended "decoy" version of b37 which includes
+
+## Which version should I use?
+It's suggested to use the extended "decoy" version of b37 which includes
 human herpesvirus sequence and a decoy sequence derived from HuRef (Craig
 Venter genome), humen BAC and Fosmid clones, and NA12878 (named "hs37d5"). It
 also has the pseudo-autosomal regions (PAR) of chromosome Y masked out
