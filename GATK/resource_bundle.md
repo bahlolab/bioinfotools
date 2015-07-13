@@ -167,3 +167,4 @@ treated as diploid. In summary:
   - <https://wiki.dnanexus.com/Scientific-Notes/human-genome>
   - <http://gatkforums.broadinstitute.org/discussion/1810/whats-the-difference-between-b37-and-hg19-resources>
   - <http://genome.ucsc.edu/FAQ/FAQreleases.html>
+  - <https://www.biostars.org/p/6918/>
