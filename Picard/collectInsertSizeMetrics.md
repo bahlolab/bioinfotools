@@ -78,4 +78,5 @@ READ_GROUP
 * Histogram output (plotted using additional output in the main program output
 file and modified for this example):
 
-![Figure insert_size_hist](img/picard/insert_size_hist.png?raw=true)
+![Figure insert_size_hist](../img/picard/insert_size_hist.png?raw=true)
+
