@@ -83,7 +83,9 @@ corresponding information is unavailable.
 | 11 |QUAL  | ASCII of Phred-scaled base QUALity+33 | `BBBBC@C?AABCBB<63>=B@>+B9-9+)2B8,+@327B5A>90((>-+''3?(/'''A)(''19('7.,**%)3:` |
 
 ## Optional fields
-All optional fields follow the TAG:TYPE:VALUE format where TAG is a two-character string. Each TAG can only appear once in one alignment line. TYPE is a single case-sensitive letter defining the format of VALUE.
+All optional fields follow the TAG:TYPE:VALUE format where TAG is a
+two-character string. Each TAG can only appear once in one alignment line.
+TYPE is a single case-sensitive letter defining the format of VALUE.
 
 | Type | Description |
 |------|-------------|
@@ -97,9 +99,16 @@ All optional fields follow the TAG:TYPE:VALUE format where TAG is a two-characte
 Example: `PG:Z:0	RG:Z:exampleBAM.bam	SM:Z:exampleBAM.bam`
 
 ## Flags
-The unmapped reads (Flag 4) are given the chromosome and position of their
+* The unmapped reads (Flag 4) are given the chromosome and position of their
 mapped mate.
 
+## Notes
+**Linear alignment**: alignment of read to reference genome that may include
+INDELs, skips and clipping, but **not** direction changes (one portion of
+alignment on forward strand and another portion on the reverse strand). Can be
+given in a single SAM record.
+
+**Chimeric alignment**: 
 
 Sources:
 

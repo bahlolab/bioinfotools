@@ -53,6 +53,6 @@ done on the servers and can be found at `$bahlolab_db/bwaindex/gatk/hg19.fa`.
 **References**
 
 * GitHub Development: <https://github.com/lh3/bwa>
-* SourcForge Release: <http://sourceforge.net/projects/bio-bwa/>
+* SourceForge Release: <http://sourceforge.net/projects/bio-bwa/>
 * Manual: <http://bio-bwa.sourceforge.net/bwa.shtml>
 * Tutorials: <http://2013-caltech-workshop.readthedocs.org/en/latest/bwa_mapping.html>
