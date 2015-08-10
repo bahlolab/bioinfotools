@@ -146,7 +146,7 @@ In summary the differences are:
 ## Which version should I use?
 It's suggested to use the extended "decoy" version of b37 which includes
 human herpesvirus sequence and a decoy sequence derived from HuRef (Craig
-Venter genome), humen BAC and Fosmid clones, and NA12878 (named "hs37d5"). It
+Venter genome), human BAC and Fosmid clones, and NA12878 (named "hs37d5"). It
 also has the pseudo-autosomal regions (PAR) of chromosome Y masked out
 (replaced with "N") so that the respective regions in chromosome X may be
 treated as diploid. In summary:
