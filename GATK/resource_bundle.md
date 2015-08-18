@@ -145,19 +145,19 @@ In summary the differences are:
 
 ## Which version should I use?
 It's suggested to use the extended "decoy" version of b37 which includes
-human herpesvirus sequence and a decoy sequence derived from HuRef (Craig
-Venter genome), human BAC and Fosmid clones, and NA12878 (named "hs37d5"). It
-also has the pseudo-autosomal regions (PAR) of chromosome Y masked out
-(replaced with "N") so that the respective regions in chromosome X may be
-treated as diploid. In summary:
+human herpesvirus sequence (Epstein-Barr virus (EBV), NC_007605) and a decoy
+sequence derived from HuRef (Craig Venter genome), human BAC and Fosmid clones,
+and NA12878 (named "hs37d5"). It also has the pseudo-autosomal regions (PAR) of
+chromosome Y masked out (replaced with "N") so that the respective regions in
+chromosome X may be treated as diploid. In summary:
   - used by the 1KG in Phase II;
   - provides better results due to the PAR masking and the addition of the
   decoy sequences;
   - supported by GATK and IGV;
   - compatible with all the annotations (dbSNP etc.) that are reported using
-  the "b37" conventions. 
+  the "b37" conventions.
 
-**References**
+**Resources**
 
 * GATK download: <https://www.broadinstitute.org/gatk/download/>
 * Bundle location: <https://www.broadinstitute.org/gatk/guide/article?id=1215>
@@ -169,3 +169,4 @@ treated as diploid. In summary:
   - <http://genome.ucsc.edu/FAQ/FAQreleases.html>
   - <https://www.biostars.org/p/6918/>
   - <https://www.biostars.org/p/103359/>
+* The decoy genome: <http://www.cureffi.org/2013/02/01/the-decoy-genome/>
