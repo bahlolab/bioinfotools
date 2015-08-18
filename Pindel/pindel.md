@@ -42,14 +42,20 @@ email=me@foo.edu.au
 
 BAM_CONFIG_FILE=${family}_bam_config.txt
 THREADS=6
+CHROM=ALL # or e.g. chr2
 
 mkdir -p output
 
 start_time=`date +%s`
 echo "Pindel starting at ${start_time}"
-pindel -f $reference -i $BAM_CONFIG_FILE -c ALL -o output/pindel_${family}_ -T $THREADS
+echo "Using $THREADS threads"
+
+pindel -f $reference -i $BAM_CONFIG_FILE -c ${CHROM} \
+-o output/pindel_${family}_${CHROM} -T $THREADS
+
 end_time=`date +%s`
 echo "Pindel finishing at `date`"
 echo "Execution time was `expr $end_time - $start_time` s."
-echo "Pindel has finished in directory" $(pwd) "on host:" $HOSTNAME | mail -s "${family} pindel analysis finished on $HOSTNAME" $email
+echo "Pindel has finished in directory" $(pwd) "on host:" $HOSTNAME |\
+mail -s "${family} pindel analysis finished on $HOSTNAME" $email
 ```
