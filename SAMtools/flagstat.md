@@ -56,6 +56,20 @@ Example output (from a sorted BAM file aligned with BWA-MEM, no duplicates flagg
 Note here that total = paired in sequencing + supplementary.
 The supplementary reads are also known as chimeric reads.
 
+Sample BASH script:
+
+```bash
+#!/bin/bash
+BAM_DIR=/path/to/bam/files
+THIS_DIR=$(pwd -P)
+
+cd $BAM_DIR
+
+for bamFile in *.bam
+do
+        samtools flagstat $bamFile >> ${THIS_DIR}/${bamFile}_flagstat.txt &
+done
+```
 
 References:
 
