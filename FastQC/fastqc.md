@@ -8,12 +8,17 @@ outputs helpful plots which can be used to infer if the data is of expected
 quality.  Modules include per base sequence quality, per sequence quality
 scores, per sequence GC content, sequence duplication levels and others.
 
-## Usage
-We use it as part of our MPS pipeline but you can run it on the command line or
-a bash script as:
+## Example Usage
 
 ```bash
-fastqc foo
+#!/bin/bash
+
+BAM_DIR=../../Data
+THIS_DIR=$(pwd -P)
+FQC=${THIS_DIR}/FastQC
+mkdir -p $FQC
+
+fastqc --extract --outdir ${FQC} --nogroup -t 6 ${BAM_DIR}/*.bam
 ```
 
 ## Output
