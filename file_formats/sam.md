@@ -9,7 +9,7 @@ Each header line starts with a "@", followed by a two-letter record type code.
 Each line is tab-delimited and (except the @CO (comment) lines) each data
 field follows a format "TAG:VALUE" where TAG is a two-letter string that
 defines the content and the format of VALUE.
-The record types and tags used are (starred tags are required when record type
+The record types and tags used are (starred `*` tags are required when record type
 is used):
 
 | Tag   | Description |
