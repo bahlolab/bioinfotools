@@ -14,17 +14,22 @@ existing one updated if necessary.
       * `l,m,n,@`: Similar to corresponding options below
 
 * New style:
-`samtools sort [-l level] [-m maxMem] [-o out.bam] [-O format] [-n] -T out.prefix [-@ threads] [in.bam]`
+`samtools sort [-l level] [-m maxMem] [-o file.bam] [-O format] [-n] -T out.prefix [-@ threads] [in.bam]`
     * Options:
       * `l`: compression level
       * `m`: max memorey required per thread (default: 768 MB)
-      * `o`: write sorted output to file instead of STDOUT
+      * `o`: write sorted output to `<file.bam>` instead of STDOUT
       * `O`: write to SAM, BAM or CRAM format. Use this when you want output to
       STDOUT
       * `n`: sort by read names (i.e., the QNAME field) rather than by
       chromosomal coordinates
-      * `T`: write tmp files to `out.prefix.bam`
+      * `T`: write tmp files to `<out.prefix>.nnnn.bam` (required)
       * `@`: number of sorting and compression threads (default: 1)
+
+Notes:
+
+* `samtools sort -T /tmp/coord.sort -o ~/Desktop/example_sam_coord_sort.sam exampleBAM.bam`
+will sort by coordinate and output to `example_sam_coor_sort.sam`;
 
 ## Example
 
