@@ -66,3 +66,6 @@ Usage Issues
 - Make sure you specify the correct path to your bam files in the config file.
 - If it outputs an error like `[bam_index_load] wrong magic number`, try
 re-indexing the bam files.
+- It takes a looooooong time to run. I tried on two WGS samples (~250GB each)
+and it took about 3 weeks to finish chromosome 1. I killed it after a month or
+so...
